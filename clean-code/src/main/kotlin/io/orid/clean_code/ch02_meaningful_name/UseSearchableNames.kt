@@ -2,6 +2,7 @@ package io.orid.clean_code.ch02_meaningful_name
 
 import kotlin.random.Random
 
+// page 29
 fun main() {
     println(sumBad())
     println(sumRealTaskWeeks())
