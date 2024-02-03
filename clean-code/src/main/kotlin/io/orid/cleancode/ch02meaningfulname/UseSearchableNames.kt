@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch02_meaningful_name
+package io.orid.cleancode.ch02meaningfulname
 
 import kotlin.random.Random
 
@@ -18,7 +18,6 @@ fun sumBad(): Double {
     }
     return s
 }
-
 
 // good case
 val taskEstimates = List(34) { Random.nextInt() }

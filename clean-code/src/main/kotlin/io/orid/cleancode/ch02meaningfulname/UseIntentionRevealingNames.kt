@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch02_meaningful_name
+package io.orid.cleancode.ch02meaningfulname
 
 // page 22. sample code
 fun main() {
@@ -16,12 +16,13 @@ fun main() {
 }
 
 // Bad Case
-private val theList = listOf(
-    intArrayOf(0, 0, 0),
-    intArrayOf(0, 0, 1),
-    intArrayOf(4, 1, 0),
-    intArrayOf(4, 1, 1),
-)
+private val theList =
+    listOf(
+        intArrayOf(0, 0, 0),
+        intArrayOf(0, 0, 1),
+        intArrayOf(4, 1, 0),
+        intArrayOf(4, 1, 1),
+    )
 
 fun getThem(): List<IntArray> {
     val list1 = mutableListOf<IntArray>()
@@ -34,18 +35,20 @@ fun getThem(): List<IntArray> {
 // Good Case
 private const val STATUS_INDEX = 0
 private const val FLAGGED = 4
-private val gameBoard = listOf(
-    intArrayOf(0, 0, 0),
-    intArrayOf(0, 0, 1),
-    intArrayOf(4, 1, 0),
-    intArrayOf(4, 1, 1),
-)
+private val gameBoard =
+    listOf(
+        intArrayOf(0, 0, 0),
+        intArrayOf(0, 0, 1),
+        intArrayOf(4, 1, 0),
+        intArrayOf(4, 1, 1),
+    )
 
 fun getFlaggedCells(): List<IntArray> {
     val flaggedCells = mutableListOf<IntArray>()
     for (cell in gameBoard) {
-        if (cell[STATUS_INDEX] == FLAGGED)
+        if (cell[STATUS_INDEX] == FLAGGED) {
             flaggedCells.addLast(cell)
+        }
     }
     return flaggedCells
 }
@@ -70,18 +73,20 @@ enum class CellStatus {
     FLAGGED,
 }
 
-private val gameBoardCells = listOf(
-    Cell(status = CellStatus.EMPTY, posX = 0, posY = 0),
-    Cell(status = CellStatus.EMPTY, posX = 0, posY = 1),
-    Cell(status = CellStatus.FLAGGED, posX = 1, posY = 0),
-    Cell(status = CellStatus.FLAGGED, posX = 1, posY = 1),
-)
+private val gameBoardCells =
+    listOf(
+        Cell(status = CellStatus.EMPTY, posX = 0, posY = 0),
+        Cell(status = CellStatus.EMPTY, posX = 0, posY = 1),
+        Cell(status = CellStatus.FLAGGED, posX = 1, posY = 0),
+        Cell(status = CellStatus.FLAGGED, posX = 1, posY = 1),
+    )
 
 fun getFlaggedCells2(): List<Cell> {
     val flaggedCells = mutableListOf<Cell>()
     for (cell in gameBoardCells) {
-        if (cell.isFlagged())
+        if (cell.isFlagged()) {
             flaggedCells.addLast(cell)
+        }
     }
     return flaggedCells
 }

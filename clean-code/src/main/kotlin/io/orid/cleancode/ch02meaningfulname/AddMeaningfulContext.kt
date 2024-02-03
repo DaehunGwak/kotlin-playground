@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch02_meaningful_name
+package io.orid.cleancode.ch02meaningfulname
 
 // page 35
 fun main() {
@@ -13,7 +13,10 @@ fun main() {
 }
 
 // bad case
-fun printGuessStatistics(candidate: Char, count: UInt) {
+fun printGuessStatistics(
+    candidate: Char,
+    count: UInt,
+) {
     val number: String
     val verb: String
     val pluralModifier: String
@@ -43,8 +46,10 @@ class GuessStatisticsMessage(
     private var verb: String = "",
     private var pluralModifier: String = "",
 ) {
-
-    fun make(candidate: Char, count: UInt): String {
+    fun make(
+        candidate: Char,
+        count: UInt,
+    ): String {
         createPluralDependentMessageParts(count)
         return "There $verb $number $candidate$pluralModifier"
     }

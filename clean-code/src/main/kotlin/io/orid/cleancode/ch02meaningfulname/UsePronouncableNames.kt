@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch02_meaningful_name
+package io.orid.cleancode.ch02meaningfulname
 
 import java.time.LocalDateTime
 

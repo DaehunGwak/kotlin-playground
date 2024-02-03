@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch03_functions
+package io.orid.cleancode.ch03functions
 
 // page 47
 
@@ -32,8 +32,8 @@ fun calculateSalariedPay(employee: BadEmployee): Money {
     TODO("Not yet implemented")
 }
 
-class InvalidEmployeeType(type: EmployeeType)
-    : Exception("${type.name} is a invalid employee type")
+class InvalidEmployeeType(type: EmployeeType) :
+    Exception("${type.name} is a invalid employee type")
 
 class BadEmployee(
     var type: EmployeeType,
