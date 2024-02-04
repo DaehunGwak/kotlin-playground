@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch02_meaningful_name
+package io.orid.cleancode.ch02meaningfulname
 
 // page 26
 fun main() {
@@ -14,14 +14,20 @@ fun main() {
 }
 
 // bad case
-fun copyCharsBad(a1: CharArray, a2: CharArray) {
+fun copyCharsBad(
+    a1: CharArray,
+    a2: CharArray,
+) {
     for (i in a1.indices) {
         a2[i] = a1[i]
     }
 }
 
 // good case
-fun copyCharsGood(source: CharArray, destination: CharArray) {
+fun copyCharsGood(
+    source: CharArray,
+    destination: CharArray,
+) {
     for (i in source.indices) {
         destination[i] = source[i]
     }

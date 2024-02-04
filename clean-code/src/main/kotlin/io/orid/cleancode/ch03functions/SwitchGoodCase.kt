@@ -1,4 +1,4 @@
-package io.orid.clean_code.ch03_functions
+package io.orid.cleancode.ch03functions
 
 // 48 page
 
@@ -19,7 +19,9 @@ sealed class Employee {
     }
 
     abstract fun isPayday(): Boolean
+
     abstract fun calculatePay(): Money
+
     abstract fun deliverPay(pay: Money)
 }
 
@@ -31,9 +33,11 @@ class CommissionedEmployee : Employee() {
     override fun isPayday(): Boolean {
         TODO("Not yet implemented")
     }
+
     override fun calculatePay(): Money {
         TODO("Not yet implemented")
     }
+
     override fun deliverPay(pay: Money) {
         TODO("Not yet implemented")
     }
@@ -47,9 +51,11 @@ class SalariedEmployee : Employee() {
     override fun isPayday(): Boolean {
         TODO("Not yet implemented")
     }
+
     override fun calculatePay(): Money {
         TODO("Not yet implemented")
     }
+
     override fun deliverPay(pay: Money) {
         TODO("Not yet implemented")
     }
@@ -63,9 +69,11 @@ class HourlyEmployee : Employee() {
     override fun isPayday(): Boolean {
         TODO("Not yet implemented")
     }
+
     override fun calculatePay(): Money {
         TODO("Not yet implemented")
     }
+
     override fun deliverPay(pay: Money) {
         TODO("Not yet implemented")
     }
